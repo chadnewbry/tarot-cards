@@ -1,0 +1,22 @@
+{
+  "app": {
+    "name": "Tarot Card",
+    "bundleId": "com.chadnewbry.tarotcard",
+    "copyright": "© 2026 Chad Newbry"
+  },
+  "urls": {
+    "website": null,
+    "privacyPolicy": null,
+    "termsOfService": null,
+    "support": null
+  },
+  "review": {
+    "demoAccountRequired": false,
+    "contact": {
+      "firstName": "Chad",
+      "lastName": "Newbry",
+      "email": "chad.newbry@gmail.com",
+      "phone": "+15417605021"
+    }
+  }
+}
