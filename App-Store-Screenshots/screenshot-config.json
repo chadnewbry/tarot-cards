@@ -1,0 +1,35 @@
+{
+  "screenshots": [
+    {
+      "filename": "01-home.png",
+      "header": "Your Daily Guidance",
+      "subtitle": "Draw a card and discover what the universe has in store"
+    },
+    {
+      "filename": "02-card-detail.png",
+      "header": "Deep Card Insights",
+      "subtitle": "Explore meanings, symbolism, and interpretations"
+    },
+    {
+      "filename": "03-reading.png",
+      "header": "Powerful Spreads",
+      "subtitle": "Past, present, and future laid out before you"
+    },
+    {
+      "filename": "04-collection.png",
+      "header": "Full 78-Card Deck",
+      "subtitle": "Major and Minor Arcana at your fingertips"
+    },
+    {
+      "filename": "05-settings.png",
+      "header": "Make It Yours",
+      "subtitle": "Customize your tarot experience"
+    }
+  ],
+  "theme": {
+    "backgroundColor": "#1A0A2E",
+    "headerColor": "#E8D5B7",
+    "subtitleColor": "#B8A088",
+    "fontFamily": "Georgia"
+  }
+}
