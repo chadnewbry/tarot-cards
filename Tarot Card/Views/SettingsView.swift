@@ -10,6 +10,12 @@ struct SettingsView: View {
                     } label: {
                         Label("Feedback / Product Suggestions", systemImage: "envelope")
                     }
+
+                    Button {
+                        contactSupport()
+                    } label: {
+                        Label("Contact Support", systemImage: "questionmark.circle")
+                    }
                 }
 
                 Section("About") {
@@ -18,6 +24,14 @@ struct SettingsView: View {
             }
             .navigationTitle("Settings")
         }
+    }
+
+    private func contactSupport() {
+        let email = AppConfig.shared.review?.contactEmail ?? "chad.newbry@gmail.com"
+        let subject = "Support: Tarot Card"
+        let encodedSubject = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? subject
+        guard let url = URL(string: "mailto:\(email)?subject=\(encodedSubject)") else { return }
+        UIApplication.shared.open(url)
     }
 
     private func sendFeedback() {
