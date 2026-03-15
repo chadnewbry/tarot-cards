@@ -1,0 +1,66 @@
+# Maestro Screenshot Capture Flow — Tarot Card
+#
+# Captures App Store screenshot input images.
+# Run: maestro test maestro/capture-screenshots.yaml
+#
+# Requires iPhone 16 Pro Max simulator.
+
+appId: com.chadnewbry.tarotcard
+name: "Capture App Store Screenshots"
+---
+
+# ──────────────────────────────────────────────
+# 1. First launch — seed screenshot data
+# ──────────────────────────────────────────────
+- launchApp:
+    appId: com.chadnewbry.tarotcard
+    clearState: true
+    arguments:
+      --screenshot-mode: ""
+
+# ──────────────────────────────────────────────
+# 2. Relaunch so @Query views pick up seeded data
+# ──────────────────────────────────────────────
+- launchApp:
+    appId: com.chadnewbry.tarotcard
+    clearState: false
+    arguments:
+      --screenshot-mode: ""
+
+# ──────────────────────────────────────────────
+# 3. Capture screenshots
+# ──────────────────────────────────────────────
+
+# -- Screenshot 1: Home / Daily Card --
+- waitForAnimationToEnd
+- takeScreenshot: "01-home"
+
+# -- Screenshot 2: Card Detail --
+# TODO: Update tapOn target once card list/detail views are implemented
+# - tapOn: "The Fool"
+# - waitForAnimationToEnd
+# - takeScreenshot: "02-card-detail"
+
+# -- Screenshot 3: Reading / Spread --
+# TODO: Update once reading/spread views are implemented
+# - tapOn: "Readings"
+# - waitForAnimationToEnd
+# - takeScreenshot: "03-reading"
+
+# -- Screenshot 4: Card Collection / Library --
+# TODO: Update once card library view is implemented
+# - tapOn: "Cards"
+# - waitForAnimationToEnd
+# - takeScreenshot: "04-collection"
+
+# -- Screenshot 5: Settings --
+- tapOn: "Settings"
+- waitForAnimationToEnd
+- takeScreenshot: "05-settings"
+
+# ──────────────────────────────────────────────
+# Notes
+# ──────────────────────────────────────────────
+# Uncomment and update the TODO sections above as
+# screens are added to the app. Each screenshot
+# should showcase a key feature with realistic data.
